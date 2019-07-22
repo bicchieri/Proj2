@@ -7,11 +7,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 app.set("view engine", "ejs"); //this sets the default to look for ejs files
 
-
-
-
-// BODY CODE
-
 //basic / req / 
 app.get("/", function(req, res){
 	res.render("home");
