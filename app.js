@@ -51,21 +51,20 @@ app.post("/", function(req, res){
           
             // create reusable transporter object using the default SMTP transport
             let transporter = nodemailer.createTransport({
-              host: "smtp.ethereal.email",
-              port: 587,
-              secure: false, // true for 465, false for other ports
-              auth: {
-                user: testAccount.user, // generated ethereal user
-                pass: testAccount.pass // generated ethereal password
-              }
+                host: 'smtp.ethereal.email',
+                port: 587,
+                auth: {
+                    user: 'quincy.gutkowski31@ethereal.email', // generated ethereal user
+                    pass: 'syPsQDnUC3SxhVr5yM' // generated ethereal password
+                }
             });
           
             // send mail with defined transport object
             let info = await transporter.sendMail({
-              from: '"Fred Foo 👻" <foo@example.com>', // sender address
-              to: "bar@example.com, baz@example.com", // list of receivers
-              subject: "Hello ✔", // Subject line
-              text: "Hello world?", // plain text body
+              from: '"Quincy Gutowski" <quincy.gutkowski31@ethereal.email>', // sender address
+              to: req.body.email, // list of receivers
+              subject: "Your Safari!", // Subject line
+              text: "Your recommended safari from Bicchieri Safaris is " + yourSafari + "!", // plain text body
               html: "<b>Hello world?</b>" // html body
             });
           

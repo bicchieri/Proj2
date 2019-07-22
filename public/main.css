@@ -5,6 +5,16 @@ body {
     /* font-family: 'Emilys Candy', cursive; d0d3cf */
 }
 
+.selectorLink:link {
+    color: black;
+    font-size: 2.0rem;
+}
+
+.selectorLink:hover {
+    color: blue;
+    font-size: 2.5rem;
+}
+
 .row {
     background-color: white;
 }
