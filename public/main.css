@@ -1,0 +1,132 @@
+body {
+    padding-top: 65px;
+    /* padding-bottom: 65px; */
+    background: white;
+    /* font-family: 'Emilys Candy', cursive; d0d3cf */
+}
+
+.row {
+    background-color: white;
+}
+
+#safariname {
+    background-color: #BBBAB6
+}
+
+.blurb h2 {
+   color: #f1592a;
+   font-weight: 100;
+   font-size: 2.5rem;
+}
+
+p {
+    color: #f1592a;
+}
+
+#textboxAbout {
+    opacity: 0.7;
+}
+
+#conservation {
+    background-image: url("https://www.accafrica-us.org/wp-content/uploads/sites/2/2019/06/Screen-Shot-2019-06-23-at-4.41.39-PM.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #BBBAB6;
+    border: white 10% solid;
+    height: 700px;
+}
+
+#history {
+    background-image: url("https://images.squarespace-cdn.com/content/v1/51b8dc75e4b0c8b738084aae/1558288151754-CSEVDLN3A7Z6SOO9MI6D/ke17ZwdGBToddI8pDm48kOj2o7xPvSuFMwRI92Pb-ih7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmv1ihXzK27xJYOPbUG3fJT6ef5qSdZPL6FA020uv7fIYfnK_01VYPR6g97XDy16Ef/2019-05-13-04-04+Hess+%28a%29.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #cccccc;
+    border: white 10% solid;
+    height: 700px;
+}
+
+.blurb p {
+    color: #f1592a;
+    font-weight: 100;
+    font-size: 1.0rem;
+    line-height: 2;
+}
+
+.content {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#mainNavbar {
+    font-size: 1.5rem;
+    font-weight: 100;
+    background-color: #BBBAB6;
+    border-bottom: black solid 3px;
+    
+}
+
+#mainNavbar .nav-link {
+    color: black;
+}
+
+#mainNavbar .nav-link:hover {
+    color: #f1592a;
+}
+
+#mainNavbar .navbar-brand {
+    color: #f1592a;
+    font-size: 1.5rem;
+}
+
+.fa .fa-navicon {
+color: #f1592a;
+}
+
+/* .navbar-toggler {
+    border-color: #f1592a;
+} */
+
+#headingGroup span {
+    color: #f1592a;
+}
+
+#headingGroup h1 {
+    font-weight: 100;
+    font-size: 4rem;
+    color: #f1592a;
+}
+
+.navbar.scrolled {
+    background: #c6cfff;
+    transition: background 500ms;
+}
+
+#finder {
+    border: black 3px solid;
+}
+
+/*** Footer styling ***/
+
+footer {
+    text-align: center;
+    border-top: 2px solid #f1592a;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+footer p {
+    font-size: 0.75em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #f1592a;
+}
+
+@media (max-width: 1200px) {
+    #headingGroup h1 {
+        font-weight: 100;
+        font-size: 3rem;
+    }
+    .blurb h2 {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,96 @@
+<!doctype html></body>
+<html lang="en">
+
+<head>
+
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+crossorigin="anonymous">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="./main.css">
+
+<script type="text/javascript" src="app.js"></script>
+
+<title>Bicchieri Safaris</title>
+
+</head>
+<body>
+
+    <header style="">
+        <!-- //NAV BAR -->
+        <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md py-0 fixed-top" style="">
+                <a class="navbar-brand" href="#"><i class="fas fa fa-navicon"></i>  Bicchieri Safaris</a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navLinks">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="nav-item">
+                                <a href="/home" class="nav-link">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/main" class="nav-link">SAFARIS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/about" class="nav-link">ABOUT</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+    </header>
+
+
+     <div class="container" id="safariFinder">
+            <div class="row">
+                <div style="width: 40%; margin: 25px auto;">
+                    <h2>Find Your Safari!</h2>
+                    <form action="" method="POST" enctype="text/plain"> 
+                        <div class="form-group">
+                            <label for="envType">Preferred Environment Type</label>
+                            <select class="form-control" name="envType" id="envTypeInput">
+                                <option value="dry">Desert</option>
+                                <option value="wet">Ocean</option>
+                                <option value="dry">Highvelt</option>
+                                <option value="wet">River</option>
+                            </select>
+                            <label for="duration">Duration of Safari</label>
+                            <select class="form-control" name="duration" id="durationInput">
+                                <option value="short">Under 5</option>
+                                <option value="medium">5-10</option>
+                                <option value="long">More than 10</option>
+                            </select>
+                            <input type="text" id="email" placeholder="Your Email"></input>
+                            <label for="best">Your Recommended Safari is:</label>
+                            <button class="btn btn-lg btn-primary btn-block" onclick="function best(); function mailto()"> Submit! </button>
+                        </div>        
+                    </form>
+                </div>
+            </div>
+         </div>
+
+        <!-- //FOOTER -->
+<footer>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header" >
+                    <p style="font-size: 1vw;" class="navbar-brand" href="/">Bicchieri Safaris is a Registered Trademark of TravelProfiles Online CopyWrite Teo Fiann Bicchieri, all rights reserved. Please <a><strong>contact</strong></a> for details regarding use and marketing.</p>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right"></ul>
+                </div>
+            </div>
+        </nav>
+    </footer>
+                
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+                        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+                        crossorigin="anonymous"></script>
+                
+    </body>
