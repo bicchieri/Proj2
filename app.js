@@ -18,6 +18,10 @@ app.get("/about", function(req, res){
     res.render("about");
 }); //takes user to about page
 
+app.post("/selector", function(req, res){
+    res.render("selector");
+}); //shows the selector tool form for post
+
 app.get("/selector", function(req, res){
     res.render("selector");
 }); //shows the selector tool form 	
