@@ -47,25 +47,24 @@ app.post("/", function(req, res){
 
             // Generate test SMTP service account from ethereal.email
             // Only needed if you don't have a real mail account for testing
-            let testAccount = await nodemailer.createTestAccount();
+            // let testAccount = await nodemailer.createTestAccount();
           
             // create reusable transporter object using the default SMTP transport
             let transporter = nodemailer.createTransport({
-                host: 'smtp.ethereal.email',
-                port: 587,
+                host: 'gmail',
                 auth: {
-                    user: 'quincy.gutkowski31@ethereal.email', // generated ethereal user
-                    pass: 'syPsQDnUC3SxhVr5yM' // generated ethereal password
+                    user: 'teobicchieriweb@gmail.email', // generated ethereal user
+                    pass: 'theTh0use13!' // generated ethereal password
                 }
             });
           
             // send mail with defined transport object
             let info = await transporter.sendMail({
-              from: '"Quincy Gutowski" <quincy.gutkowski31@ethereal.email>', // sender address
+              from: '"Teo Bicchieri" <teobicchieriweb@gmail.email>', // sender address
               to: req.body.email, // list of receivers
               subject: "Your Safari!", // Subject line
               text: "Your recommended safari from Bicchieri Safaris is " + yourSafari + "! Reply to this email to get for details and to book your safari today!", // plain text body
-              html: "<b>Hello world?</b>" // html body
+              html: "<b>yourSafari</b>" // html body
             });
           
             console.log("Message sent: %s", info.messageId);
@@ -89,7 +88,7 @@ app.get("/selector", function(req, res){
 }); //shows the selector tool form 	
 								
 	//set up listener for requests
-const port = process.env.PORT;
+const port = 3000 || process.env.PORT;
 app.listen(port, process.env.IP);
 
 console.log('app running on port: ', port);
