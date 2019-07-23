@@ -11,7 +11,7 @@ app.set("view engine", "ejs"); //this sets the default to look for ejs files
     host: 'smtp.gmail.com',
     auth: {
         user: 'teobicchieriweb@gmail.com', // generated ethereal user
-        pass: 'theTh0use13!' // generated ethereal password
+        pass: 'December292018!' // generated ethereal password
     }
 });
 
