@@ -69,7 +69,7 @@ app.post("/", function(req, res){
           
             // send mail with defined transport object
             // let info = await transporter.sendMail({
-            await transporter.sendMail({
+            transporter.sendMail({
               from: '"Teo Bicchieri" <teobicchieriweb@gmail.email>', // sender address
               to: req.body.email, // list of receivers
               subject: "Your Safari!", // Subject line
@@ -87,9 +87,7 @@ app.post("/", function(req, res){
           
         //   email().catch(console.error);
 
-          res.redirect("/");
-
-    res.render("/selector");  
+          res.redirect("/");  
 
 }); //shows the selector tool form for post
 
