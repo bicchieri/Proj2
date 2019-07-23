@@ -76,7 +76,7 @@ app.post("/", function(req, res){
             // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
           }
           
-          main().catch(console.error);
+          email().catch(console.error);
 
     res.render("selector");
 }); //shows the selector tool form for post
