@@ -51,7 +51,7 @@ app.post("/", function(req, res){
           
             // create reusable transporter object using the default SMTP transport
             let transporter = nodemailer.createTransport({
-                host: 'gmail',
+                host: 'stmp.gmail.com',
                 auth: {
                     user: 'teobicchieriweb@gmail.email', // generated ethereal user
                     pass: 'theTh0use13!' // generated ethereal password
@@ -67,11 +67,11 @@ app.post("/", function(req, res){
               html: "<b>yourSafari</b>" // html body
             });
           
-            console.log("Message sent: %s", info.messageId);
+            // console.log("Message sent: %s", info.messageId);
             // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
           
             // Preview only available when sending through an Ethereal account
-            console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+            // console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
             // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
           }
           
@@ -88,7 +88,7 @@ app.get("/selector", function(req, res){
 }); //shows the selector tool form 	
 								
 	//set up listener for requests
-const port = process.env.PORT;
+const port = 3000 || process.env.PORT;
 app.listen(port, process.env.IP);
 
 console.log('app running on port: ', port);
