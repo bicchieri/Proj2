@@ -64,7 +64,7 @@ app.post("/", function(req, res){
               from: '"Quincy Gutowski" <quincy.gutkowski31@ethereal.email>', // sender address
               to: req.body.email, // list of receivers
               subject: "Your Safari!", // Subject line
-              text: "Your recommended safari from Bicchieri Safaris is " + yourSafari + "!", // plain text body
+              text: "Your recommended safari from Bicchieri Safaris is " + yourSafari + "! Reply to this email to get for details and to book your safari today!", // plain text body
               html: "<b>Hello world?</b>" // html body
             });
           
@@ -77,6 +77,9 @@ app.post("/", function(req, res){
           }
           
           email().catch(console.error);
+
+          res.redirect("/");
+          
 
     res.render("selector");
 }); //shows the selector tool form for post
