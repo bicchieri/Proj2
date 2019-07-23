@@ -6,6 +6,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static("public"));
 app.set("view engine", "ejs"); //this sets the default to look for ejs files
 
+ // create reusable transporter object using the default SMTP transport
+ let transporter = nodemailer.createTransport({
+    host: 'stmp.gmail.com',
+    auth: {
+        user: 'teobicchieriweb@gmail.email', // generated ethereal user
+        pass: 'theTh0use13!' // generated ethereal password
+    }
+});
+
 //basic / req / 
 app.get("/", function(req, res){
 	res.render("home");
@@ -43,23 +52,24 @@ app.post("/", function(req, res){
 
         console.log(yourSafari)
 
-        async function email(){
+        // async function email(){
 
             // Generate test SMTP service account from ethereal.email
             // Only needed if you don't have a real mail account for testing
             // let testAccount = await nodemailer.createTestAccount();
           
             // create reusable transporter object using the default SMTP transport
-            let transporter = nodemailer.createTransport({
-                host: 'stmp.gmail.com',
-                auth: {
-                    user: 'teobicchieriweb@gmail.email', // generated ethereal user
-                    pass: 'theTh0use13!' // generated ethereal password
-                }
-            });
+            // let transporter = nodemailer.createTransport({
+            //     host: 'stmp.gmail.com',
+            //     auth: {
+            //         user: 'teobicchieriweb@gmail.email', // generated ethereal user
+            //         pass: 'theTh0use13!' // generated ethereal password
+            //     }
+            // });
           
             // send mail with defined transport object
-            let info = await transporter.sendMail({
+            // let info = await transporter.sendMail({
+            await transporter.sendMail({
               from: '"Teo Bicchieri" <teobicchieriweb@gmail.email>', // sender address
               to: req.body.email, // list of receivers
               subject: "Your Safari!", // Subject line
@@ -73,14 +83,14 @@ app.post("/", function(req, res){
             // Preview only available when sending through an Ethereal account
             // console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
             // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
-          }
+          //}
           
-          email().catch(console.error);
+        //   email().catch(console.error);
 
           res.redirect("/");
-          
 
-    res.render("selector");
+    res.render("/selector");  
+
 }); //shows the selector tool form for post
 
 app.get("/selector", function(req, res){
