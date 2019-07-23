@@ -8,9 +8,9 @@ app.set("view engine", "ejs"); //this sets the default to look for ejs files
 
  // create reusable transporter object using the default SMTP transport
  let transporter = nodemailer.createTransport({
-    host: 'stmp.gmail.com',
+    host: 'smtp.gmail.com',
     auth: {
-        user: 'teobicchieriweb@gmail.email', // generated ethereal user
+        user: 'teobicchieriweb@gmail.com', // generated ethereal user
         pass: 'theTh0use13!' // generated ethereal password
     }
 });
