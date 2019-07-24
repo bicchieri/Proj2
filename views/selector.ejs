@@ -51,22 +51,27 @@ crossorigin="anonymous">
                     <h2>Find Your Safari!</h2>
                     <form action="/" method="POST"> 
                         <div class="form-group">
-                            <label for="envType">Preferred Environment Type</label>
-                            <select class="form-control" name="envType" id="envTypeInput">
-                                <option value="dry">Desert</option>
-                                <option value="wet">Ocean</option>
-                                <option value="dry">Highvelt</option>
-                                <option value="wet">River</option>
-                            </select>
-                            <label for="duration">Duration of Safari</label>
-                            <select class="form-control" name="duration" id="durationInput">
-                                <option value="short">Under 5 Days</option>
-                                <option value="medium">5-10 Days</option>
-                                <option value="long">More than 10 Days</option>
-                            </select>
-                            <input style="padding: 5px" type="text" name="email" id="email" placeholder="Your Email"></input>
-                            <label for="best">Your Recommended Safari is:</label>
-                            <button class="btn btn-lg btn-primary btn-block"> Submit! </button>
+                            <div>
+                                <label for="envType">Preferred Environment Type</label>
+                                <select class="form-control" name="envType" id="envTypeInput">
+                                    <option value="dry">Desert</option>
+                                    <option value="wet">Ocean</option>
+                                    <option value="dry">Highvelt</option>
+                                    <option value="wet">River</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="duration">Duration of Safari</label>
+                                <select class="form-control" name="duration" id="durationInput">
+                                    <option value="short">Under 5 Days</option>
+                                    <option value="medium">5-10 Days</option>
+                                    <option value="long">More than 10 Days</option>
+                                </select>
+                            </div>
+                            <div>
+                                <input style="padding: 5px" type="text" name="email" id="email" placeholder="Your Email"></input>
+                                <button class="btn btn-lg btn-info btn-block"> Submit! </button>
+                            </div>
                         </div>        
                     </form>
                 </div>
