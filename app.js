@@ -38,7 +38,6 @@ app.post("/", function(req, res){
         {name: "Riverboat Safari", id: "wet", class: "short"},
     ];
     
-    
         let envType = req.body.envType;
         let duration = req.body.duration;
         let yourSafari;
@@ -49,23 +48,7 @@ app.post("/", function(req, res){
                 
             }
         })
-
         console.log(yourSafari)
-
-        // async function email(){
-
-            // Generate test SMTP service account from ethereal.email
-            // Only needed if you don't have a real mail account for testing
-            // let testAccount = await nodemailer.createTestAccount();
-          
-            // create reusable transporter object using the default SMTP transport
-            // let transporter = nodemailer.createTransport({
-            //     host: 'stmp.gmail.com',
-            //     auth: {
-            //         user: 'teobicchieriweb@gmail.email', // generated ethereal user
-            //         pass: 'theTh0use13!' // generated ethereal password
-            //     }
-            // });
           
             // send mail with defined transport object
             // let info = await transporter.sendMail({
@@ -73,23 +56,12 @@ app.post("/", function(req, res){
               from: '"Teo Bicchieri" <teobicchieriweb@gmail.email>', // sender address
               to: req.body.email, // list of receivers
               subject: "Your Safari!", // Subject line
-              text: "Your recommended safari from Bicchieri Safaris is " + yourSafari + "! Reply to this email to get for details and to book your safari today!", // plain text body
-              html: "<b>yourSafari</b>" // html body
+              text: "Your recommended safari from Bicchieri Safaris is " + yourSafari + "! Reply to this email for details and to book your safari today!", // plain text body
+              html: "<b>Your recommended safari from Bicchieri Safaris is </b>" + yourSafari + "! Reply to this email for details and to book your safari today!" // html body
             });
-          
-            // console.log("Message sent: %s", info.messageId);
-            // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-          
-            // Preview only available when sending through an Ethereal account
-            // console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-            // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
-          //}
-          
-        //   email().catch(console.error);
 
           res.redirect("/");  
-
-}); //shows the selector tool form for post
+});
 
 app.get("/selector", function(req, res){
     res.render("selector");
