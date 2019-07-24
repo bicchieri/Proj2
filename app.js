@@ -60,7 +60,7 @@ app.post("/", function(req, res){
               html: "<b>Your recommended safari from Bicchieri Safaris is </b>" + yourSafari + "! Reply to this email for details and to book your safari today!" // html body
             });
 
-          res.redirect("/");  
+          res.redirect("/main");  
 });
 
 app.get("/selector", function(req, res){
@@ -68,7 +68,7 @@ app.get("/selector", function(req, res){
 }); //shows the selector tool form 	
 								
 	//set up listener for requests
-const port = process.env.PORT;
+const port = 3000 || process.env.PORT;
 app.listen(port, process.env.IP);
 
 console.log('app running on port: ', port);
