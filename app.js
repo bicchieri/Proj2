@@ -68,7 +68,7 @@ app.get("/selector", function(req, res){
 }); //shows the selector tool form 	
 								
 	//set up listener for requests
-const port = 3000 || process.env.PORT;
+const port = process.env.PORT;
 app.listen(port, process.env.IP);
 
 console.log('app running on port: ', port);
