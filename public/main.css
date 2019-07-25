@@ -73,6 +73,10 @@ p {
     margin-bottom: 100px;
 }
 
+#emailInput {
+    width: 100%;
+}
+
 .btn {
     margin: 5px;
     padding: 5px;
