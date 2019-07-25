@@ -73,6 +73,11 @@ p {
     margin-bottom: 100px;
 }
 
+.btn {
+    margin: 5px;
+    padding: 5px;
+}
+
 #main {
     width: 20vw;
   height: 30vw;
